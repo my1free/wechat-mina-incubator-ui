@@ -1,0 +1,28 @@
+<!--pages/add-address/add-address.wxml-->
+<view class='container'>
+  <view class='row' bindtap='choosePosition'>
+    <view class='location'>
+      <text>点击添加位置</text>
+    </view>
+    <view class='arrow'>
+      <text> > </text>
+    </view>
+  </view>
+  <view class='my-location' wx:for="{{myLocation}}" wx:for-item="location">
+    <view class='left'>
+      <view class='title'>{{location.title}}</view>
+      <view class='address'>{{location.address}}</view>
+    </view>
+    <view class='right'>
+      <button size='mini' type='warn'  data-id="{{location.id}}" bindtap="delLocation">删除</button>
+    </view>
+  </view>
+  <view class='row' bindtap='getAllPositions'>
+    <view class='location'>
+      <text>查看所有位置</text>
+    </view>
+    <view class='arrow'>
+      <text> > </text>
+    </view>
+  </view>
+</view>

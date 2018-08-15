@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/add-address/add-address",
+    "pages/map-all/map-all",
+    "pages/base-map/base-map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "map",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  }
+}

@@ -1,0 +1,27 @@
+<!--pages/base-map/base-map.wxml-->
+<view class='container'>
+  <view class='head'>
+    <view class='left' bindtap='cancel'>取消</view>
+    <view class='right'>
+      <text bindtap='confirm'>确定</text>
+    </view>
+  </view>
+  <view class="search">
+    <input type='text' value='{{keywords}}' confirm-type='search' maxlength='100' adjust-position='true' placeholder='🔍 搜索' placeholder-style='text-align:center;' bindinput="bindSearchTap" bindconfirm='clickSearch' bindfocus='focusSearch'></input>
+  </view>
+  <view class='map'>
+    <map id="myMap" longitude="{{location.lng}}" latitude="{{location.lat}}" scale="16" markers="{{markers}}" include-points="true" bindmarkertap="markertap" show-location style="width: 100%; height: 600rpx" />
+  </view>
+  <view class='tips'>
+    <view class='row {{idx==currIdx ? "selected-row" : ""}}' wx:for="{{tips}}" wx:for-index="idx" wx:for-item="tip" data-idx="{{idx}}" data-title="{{tip.title}}" data-address="{{tip.address}}" data-lat="{{tip.location.lat}}" data-lng="{{tip.location.lng}}" bindtap='selectTip'>
+      <view class='title'>{{tip.title}}</view>
+      <view class='address'>{{tip.address}}</view>
+    </view>
+  </view>
+  <cover-view class='cover-tips' hidden='{{tipsHidden}}'>
+    <cover-view class='row {{idx==currIdx ? "selected-row" : ""}}' wx:for="{{tips}}" wx:for-item="tip" wx:for-index="idx" data-idx="{{idx}}" data-title="{{tip.title}}" data-address="{{tip.address}}" data-lat="{{tip.location.lat}}" data-lng="{{tip.location.lng}}" bindtap='selectTip'>
+      <cover-view class='title'>{{tip.title}}</cover-view>
+      <cover-view class='address'>{{tip.address}}</cover-view>
+    </cover-view>
+  </cover-view>
+</view>

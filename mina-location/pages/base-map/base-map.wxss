@@ -1,0 +1,103 @@
+/* pages/base-map/base-map.wxss */
+page{
+  width: 100%;
+  background-color: #efefef;
+  padding-bottom: 150rpx;
+}
+
+.head{
+  width: 100%;
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 35rpx;
+  padding: 10rpx;
+}
+
+.head .left{
+  width: 50%;
+  padding-left: 80rpx;
+}
+
+.head .right{
+  width: 50%;
+  text-align: right;
+  padding-right: 80rpx;
+}
+
+.container .search{
+  background-size: 30rpx;
+  width: 91%;
+  height: 60rpx;
+  margin-left: 30rpx;
+  margin-top: 18rpx;
+  margin-bottom: 18rpx;
+  line-height: 60rpx;
+  border-radius: 5rpx;
+}
+
+.search{
+  padding: 5rpx;
+}
+
+.search input{
+  padding: 5rpx;
+  font-size: 40rpx;
+  background-color: white;
+}
+
+.map{
+  margin-top: 40rpx;
+}
+
+.tips{
+  background-color: white;
+  height: 500rpx;
+  overflow-y: scroll;
+}
+
+.tips .row{
+  border-bottom: 1rpx solid gray;
+  padding: 20rpx 50rpx;
+}
+
+.selected-row{
+  background-color: #99ffff;
+}
+
+.tips .row .title{
+  font-size: 35rpx;
+  color: black;
+}
+
+.tips .row .address{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.cover-tips{
+  position: fixed;
+  top: 170rpx;
+  width: 100%;
+  background-color: white;
+  max-height: 80%;
+  overflow-y: scroll;
+  font-size: 30rpx;
+  color: gray;
+  padding: 50rpx;
+  z-index: 999;
+}
+
+.cover-tips .row{
+  border-bottom: 1rpx solid gray;
+  padding: 20rpx;  
+}
+
+.cover-tips .row .title{
+  font-size: 40rpx;
+  color: black;
+}
+
+.cover-tips .row .address{
+  margin-top: 10rpx;
+}
